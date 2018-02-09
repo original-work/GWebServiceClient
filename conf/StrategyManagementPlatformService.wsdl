@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://strategy.sercice.badsms.ctcc.wsdl.chinatelecom.com.cn" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://strategy.sercice.badsms.ctcc.wsdl.chinatelecom.com.cn" xmlns:intf="http://strategy.sercice.badsms.ctcc.wsdl.chinatelecom.com.cn" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://strategy.sercice.badsms.ctcc.wsdl.chinatelecom.com.cn" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getEffectiveStrategyResult">
+    <complexType>
+     <sequence>
+      <element name="transactionid" type="xsd:string"/>
+      <element name="filepath" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEffectiveStrategyResultResponse">
+    <complexType>
+     <sequence>
+      <element name="getEffectiveStrategyResultReturn" type="impl:ResponseInfo"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ResponseInfo">
+    <sequence>
+     <element name="result" nillable="true" type="xsd:string"/>
+     <element name="resultdesc" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="getCentralStrategyResult">
+    <complexType>
+     <sequence>
+      <element name="transactionid" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getCentralStrategyResultResponse">
+    <complexType>
+     <sequence>
+      <element name="getCentralStrategyResultReturn" type="impl:ResponseInfo"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setProvincialStrategyBak">
+    <complexType>
+     <sequence>
+      <element name="provincialpolicysetXml" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setProvincialStrategyBakResponse">
+    <complexType>
+     <sequence>
+      <element name="setProvincialStrategyBakReturn" type="impl:ResponseInfo"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getBlackListResult">
+    <complexType>
+     <sequence>
+      <element name="transactionid" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getBlackListResultResponse">
+    <complexType>
+     <sequence>
+      <element name="getBlackListResultReturn" type="impl:ResponseInfo"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getBlackListResultResponse">
+
+      <wsdl:part element="impl:getBlackListResultResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEffectiveStrategyResultRequest">
+
+      <wsdl:part element="impl:getEffectiveStrategyResult" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getBlackListResultRequest">
+
+      <wsdl:part element="impl:getBlackListResult" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setProvincialStrategyBakRequest">
+
+      <wsdl:part element="impl:setProvincialStrategyBak" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCentralStrategyResultResponse">
+
+      <wsdl:part element="impl:getCentralStrategyResultResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCentralStrategyResultRequest">
+
+      <wsdl:part element="impl:getCentralStrategyResult" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setProvincialStrategyBakResponse">
+
+      <wsdl:part element="impl:setProvincialStrategyBakResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEffectiveStrategyResultResponse">
+
+      <wsdl:part element="impl:getEffectiveStrategyResultResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="StrategyManagementPlatformService">
+
+      <wsdl:operation name="getEffectiveStrategyResult">
+
+         <wsdl:input message="impl:getEffectiveStrategyResultRequest" name="getEffectiveStrategyResultRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getEffectiveStrategyResultResponse" name="getEffectiveStrategyResultResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCentralStrategyResult">
+
+         <wsdl:input message="impl:getCentralStrategyResultRequest" name="getCentralStrategyResultRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCentralStrategyResultResponse" name="getCentralStrategyResultResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setProvincialStrategyBak">
+
+         <wsdl:input message="impl:setProvincialStrategyBakRequest" name="setProvincialStrategyBakRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setProvincialStrategyBakResponse" name="setProvincialStrategyBakResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBlackListResult">
+
+         <wsdl:input message="impl:getBlackListResultRequest" name="getBlackListResultRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getBlackListResultResponse" name="getBlackListResultResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="StrategyManagementPlatformServiceSoapBinding" type="impl:StrategyManagementPlatformService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getEffectiveStrategyResult">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEffectiveStrategyResultRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEffectiveStrategyResultResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCentralStrategyResult">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCentralStrategyResultRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCentralStrategyResultResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setProvincialStrategyBak">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setProvincialStrategyBakRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setProvincialStrategyBakResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBlackListResult">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getBlackListResultRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getBlackListResultResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="StrategyManagementPlatformServiceService">
+
+      <wsdl:port binding="impl:StrategyManagementPlatformServiceSoapBinding" name="StrategyManagementPlatformService">
+
+         <wsdlsoap:address location="http://47.94.154.149:8090/badsms_data/services/StrategyManagementPlatformService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

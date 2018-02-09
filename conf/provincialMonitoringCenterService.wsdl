@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:intf="http://provincial.sercice.badsms.ctcc.wsdl.chinatelecom.com.cn" xmlns:impl="http://provincial.sercice.badsms.ctcc.wsdl.chinatelecom.com.cn" xmlns:apachesoap="http://xml.apache.org/xml-soap" targetNamespace="http://provincial.sercice.badsms.ctcc.wsdl.chinatelecom.com.cn">
+  <wsdl:types>
+<schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:intf="http://provincial.sercice.badsms.ctcc.wsdl.chinatelecom.com.cn" xmlns:impl="http://provincial.sercice.badsms.ctcc.wsdl.chinatelecom.com.cn" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://provincial.sercice.badsms.ctcc.wsdl.chinatelecom.com.cn">
+   
+  <element name="getEffectiveStrategy">
+    
+    <complexType>
+     
+      <sequence>
+      
+        <element name="transactionid" type="xsd:string"/>
+     
+      </sequence>
+    
+    </complexType>
+   
+  </element>
+   
+  <element name="getEffectiveStrategyResponse">
+    
+    <complexType>
+     
+      <sequence>
+      
+        <element name="getEffectiveStrategyReturn" type="impl:ResponseInfo"/>
+     
+      </sequence>
+    
+    </complexType>
+   
+  </element>
+   
+  <complexType name="ResponseInfo">
+    
+    <sequence>
+     
+      <element name="result" nillable="true" type="xsd:string"/>
+     
+      <element name="resultdesc" nillable="true" type="xsd:string"/>
+    
+    </sequence>
+   
+  </complexType>
+   
+  <element name="setCentralStrategyFTPAddress">
+    
+    <complexType>
+     
+      <sequence>
+      
+        <element name="transactionid" type="xsd:string"/>
+      
+        <element name="filepath" type="xsd:string"/>
+     
+      </sequence>
+    
+    </complexType>
+   
+  </element>
+   
+  <element name="setCentralStrategyFTPAddressResponse">
+    
+    <complexType>
+     
+      <sequence>
+      
+        <element name="setCentralStrategyFTPAddressReturn" type="impl:ResponseInfo"/>
+     
+      </sequence>
+    
+    </complexType>
+   
+  </element>
+   
+  <element name="delFilterRule">
+    
+    <complexType>
+     
+      <sequence>
+      
+        <element name="policysetid" type="xsd:string"/>
+      
+        <element name="cause" type="xsd:string"/>
+     
+      </sequence>
+    
+    </complexType>
+   
+  </element>
+   
+  <element name="delFilterRuleResponse">
+    
+    <complexType>
+     
+      <sequence>
+      
+        <element name="delFilterRuleReturn" type="impl:ResponseInfo"/>
+     
+      </sequence>
+    
+    </complexType>
+   
+  </element>
+   
+  <element name="setBlackListFTPAddress">
+    
+    <complexType>
+     
+      <sequence>
+      
+        <element name="transactionid" type="xsd:string"/>
+      
+        <element name="filepath" type="xsd:string"/>
+     
+      </sequence>
+    
+    </complexType>
+   
+  </element>
+   
+  <element name="setBlackListFTPAddressResponse">
+    
+    <complexType>
+     
+      <sequence>
+      
+        <element name="setBlackListFTPAddressReturn" type="impl:ResponseInfo"/>
+     
+      </sequence>
+    
+    </complexType>
+   
+  </element>
+  
+</schema>
+  </wsdl:types>
+  <wsdl:message name="setCentralStrategyFTPAddressResponse">
+    <wsdl:part element="impl:setCentralStrategyFTPAddressResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="delFilterRuleResponse">
+    <wsdl:part element="impl:delFilterRuleResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEffectiveStrategyResponse">
+    <wsdl:part element="impl:getEffectiveStrategyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setCentralStrategyFTPAddressRequest">
+    <wsdl:part element="impl:setCentralStrategyFTPAddress" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setBlackListFTPAddressResponse">
+    <wsdl:part element="impl:setBlackListFTPAddressResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEffectiveStrategyRequest">
+    <wsdl:part element="impl:getEffectiveStrategy" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setBlackListFTPAddressRequest">
+    <wsdl:part element="impl:setBlackListFTPAddress" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="delFilterRuleRequest">
+    <wsdl:part element="impl:delFilterRule" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ProvincialMonitoringCenterService">
+    <wsdl:operation name="getEffectiveStrategy">
+      <wsdl:input message="impl:getEffectiveStrategyRequest" name="getEffectiveStrategyRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:getEffectiveStrategyResponse" name="getEffectiveStrategyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setCentralStrategyFTPAddress">
+      <wsdl:input message="impl:setCentralStrategyFTPAddressRequest" name="setCentralStrategyFTPAddressRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:setCentralStrategyFTPAddressResponse" name="setCentralStrategyFTPAddressResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delFilterRule">
+      <wsdl:input message="impl:delFilterRuleRequest" name="delFilterRuleRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:delFilterRuleResponse" name="delFilterRuleResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setBlackListFTPAddress">
+      <wsdl:input message="impl:setBlackListFTPAddressRequest" name="setBlackListFTPAddressRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:setBlackListFTPAddressResponse" name="setBlackListFTPAddressResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProvincialMonitoringCenterServiceSoapBinding" type="impl:ProvincialMonitoringCenterService">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getEffectiveStrategy">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getEffectiveStrategyRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEffectiveStrategyResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setCentralStrategyFTPAddress">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="setCentralStrategyFTPAddressRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setCentralStrategyFTPAddressResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delFilterRule">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="delFilterRuleRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="delFilterRuleResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setBlackListFTPAddress">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="setBlackListFTPAddressRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setBlackListFTPAddressResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProvincialMonitoringCenterServiceService">
+    <wsdl:port binding="impl:ProvincialMonitoringCenterServiceSoapBinding" name="ProvincialMonitoringCenterService">
+      <wsdlsoap:address location="http://172.20.28.73:8088/cmppws/ws/provincialMonitoringCenterService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
